@@ -369,9 +369,54 @@
             font-size: 0.75rem;
         }
 
+        /* ===== GALERIA DE VEÍCULOS ===== */
+        .veiculos-section {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .veiculo-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .veiculo-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+        }
+
+        .veiculo-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .veiculo-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .veiculo-card .card-body {
+            padding: 25px;
+        }
+
+        .veiculo-card .badge-ano {
+            background: var(--primary-dark);
+            color: var(--gold);
+            font-weight: 600;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+        }
+
         /* ===== CONTATO ===== */
         .contato-section {
-            background: white;
+            background: var(--bg-light);
             padding: 80px 0;
         }
 
@@ -427,7 +472,7 @@
 
         /* ===== POLÍTICA DE PRIVACIDADE ===== */
         .policy-section {
-            background: var(--bg-light);
+            background: white;
             padding: 60px 0 40px;
             border-top: 1px solid #e2e8f0;
         }
@@ -591,6 +636,9 @@
                         <a class="nav-link" href="#pecas">Peças</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#veiculos">Veículos</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#contato">Contato</a>
                     </li>
                     <li class="nav-item">
@@ -638,7 +686,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 hero-image-wrapper animate__animated animate__fadeInRight">
-                    <img src="https://picsum.photos/seed/auto/800/600" alt="Peças automotivas e veículos">
+                    <img src="https://picsum.photos/seed/automotivo/800/600" alt="Peças automotivas e veículos">
                     <div class="hero-badge">
                         <i class="bi bi-trophy-fill me-2"></i>Confiança e Qualidade
                     </div>
@@ -818,6 +866,84 @@
         </div>
     </section>
 
+    <!-- ===== VEÍCULOS EM DESTAQUE ===== -->
+    <section id="veiculos" class="veiculos-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">
+                    Veículos em <span class="highlight">Destaque</span>
+                </h2>
+                <p class="section-subtitle">Confira nossa seleção de veículos com peças de qualidade</p>
+                <div class="section-divider mx-auto"></div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4 animate__animated animate__fadeInUp">
+                    <div class="veiculo-card">
+                        <img src="https://picsum.photos/seed/carro1/600/400" alt="Veículo 1">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="card-title">Fiat Uno Mille</h5>
+                                <span class="badge-ano"><i class="bi bi-calendar3 me-1"></i>2015</span>
+                            </div>
+                            <p class="card-text" style="color: var(--text-gray);">Veículo completo com peças originais revisadas. Excelente estado de conservação.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="price">R$ 18.900,00</span>
+                                <a href="#" class="btn btn-sm" style="background: var(--gold); color: var(--primary-dark); font-weight: 600; border-radius: 50px; padding: 8px 20px;">
+                                    <i class="bi bi-eye me-1"></i>Detalhes
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
+                    <div class="veiculo-card">
+                        <img src="https://picsum.photos/seed/carro2/600/400" alt="Veículo 2">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="card-title">VW Gol 1.6</h5>
+                                <span class="badge-ano"><i class="bi bi-calendar3 me-1"></i>2017</span>
+                            </div>
+                            <p class="card-text" style="color: var(--text-gray);">Motor completo, suspensão revisada e documentação em dia. Pronto para rodar.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="price">R$ 24.500,00</span>
+                                <a href="#" class="btn btn-sm" style="background: var(--gold); color: var(--primary-dark); font-weight: 600; border-radius: 50px; padding: 8px 20px;">
+                                    <i class="bi bi-eye me-1"></i>Detalhes
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                    <div class="veiculo-card">
+                        <img src="https://picsum.photos/seed/carro3/600/400" alt="Veículo 3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="card-title">Chevrolet Onix</h5>
+                                <span class="badge-ano"><i class="bi bi-calendar3 me-1"></i>2019</span>
+                            </div>
+                            <p class="card-text" style="color: var(--text-gray);">Peças originais, baixa quilometragem. Veículo revisado e com garantia.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="price">R$ 32.700,00</span>
+                                <a href="#" class="btn btn-sm" style="background: var(--gold); color: var(--primary-dark); font-weight: 600; border-radius: 50px; padding: 8px 20px;">
+                                    <i class="bi bi-eye me-1"></i>Detalhes
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="#" class="btn" style="background: var(--primary-dark); color: white; padding: 12px 40px; border-radius: 50px; font-weight: 600; transition: var(--transition);">
+                    <i class="bi bi-grid-3x3-gap-fill me-2"></i>Ver Todos os Veículos
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- ===== CONTATO ===== -->
     <section id="contato" class="contato-section">
         <div class="container">
@@ -887,7 +1013,7 @@
                 </div>
 
                 <div class="col-lg-6 animate__animated animate__fadeInRight">
-                    <div style="background: var(--bg-light); padding: 40px; border-radius: 24px; box-shadow: var(--shadow);">
+                    <div style="background: white; padding: 40px; border-radius: 24px; box-shadow: var(--shadow);">
                         <h5 class="fw-bold mb-4">
                             <i class="bi bi-chat-dots-fill me-2" style="color: var(--gold);"></i>Envie uma Mensagem
                         </h5>
@@ -1009,6 +1135,7 @@
                         <li><a href="#home"><i class="bi bi-chevron-right me-1" style="font-size: 0.7rem;"></i>Home</a></li>
                         <li><a href="#sobre"><i class="bi bi-chevron-right me-1" style="font-size: 0.7rem;"></i>Sobre</a></li>
                         <li><a href="#pecas"><i class="bi bi-chevron-right me-1" style="font-size: 0.7rem;"></i>Peças</a></li>
+                        <li><a href="#veiculos"><i class="bi bi-chevron-right me-1" style="font-size: 0.7rem;"></i>Veículos</a></li>
                         <li><a href="#contato"><i class="bi bi-chevron-right me-1" style="font-size: 0.7rem;"></i>Contato</a></li>
                         <li><a href="#politica"><i class="bi bi-chevron-right me-1" style="font-size: 0.7rem;"></i>Política de Privacidade</a></li>
                     </ul>
