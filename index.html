@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     
     <style>
-        /* ===== RESET E VARIÁVEIS ===== */
         :root {
             --primary-dark: #0a1e2b;
             --primary-blue: #1a3a4d;
@@ -43,7 +42,6 @@
             scroll-behavior: smooth;
         }
 
-        /* ===== SCROLLBAR ===== */
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -54,16 +52,11 @@
             background: var(--gold);
             border-radius: 10px;
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--gold-dark);
-        }
 
-        /* ===== NAVBAR ===== */
         .navbar-custom {
             background: var(--primary-dark);
             padding: 12px 0;
             box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-            transition: var(--transition);
             border-bottom: 3px solid var(--gold);
         }
 
@@ -71,7 +64,6 @@
             font-weight: 800;
             font-size: 1.6rem;
             color: var(--gold) !important;
-            letter-spacing: -0.5px;
         }
 
         .navbar-custom .navbar-brand i {
@@ -86,28 +78,11 @@
             padding: 8px 18px !important;
             border-radius: 8px;
             transition: var(--transition);
-            position: relative;
         }
 
         .navbar-custom .nav-link:hover {
             color: var(--gold) !important;
             background: rgba(245, 184, 27, 0.1);
-        }
-
-        .navbar-custom .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 2px;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background: var(--gold);
-            transition: var(--transition);
-            transform: translateX(-50%);
-        }
-
-        .navbar-custom .nav-link:hover::after {
-            width: 60%;
         }
 
         .navbar-custom .nav-link.active {
@@ -116,32 +91,18 @@
 
         .navbar-toggler {
             border-color: var(--gold);
-            padding: 8px 12px;
         }
 
         .navbar-toggler-icon {
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(245, 184, 27, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
         }
 
-        /* ===== HERO ===== */
         .hero {
             background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-blue) 100%);
             padding: 80px 0 70px;
             position: relative;
             overflow: hidden;
             border-bottom: 5px solid var(--gold);
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(245, 184, 27, 0.08) 0%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
         }
 
         .hero h1 {
@@ -154,13 +115,11 @@
 
         .hero h1 .highlight {
             color: var(--gold);
-            position: relative;
         }
 
         .hero .lead {
             color: var(--text-gray);
             font-size: 1.2rem;
-            font-weight: 400;
             max-width: 600px;
             margin-bottom: 30px;
             line-height: 1.8;
@@ -180,7 +139,7 @@
 
         .hero .btn-gold:hover {
             background: var(--gold-light);
-            transform: translateY(-3px) scale(1.02);
+            transform: translateY(-3px);
             box-shadow: 0 12px 35px rgba(245, 184, 27, 0.5);
         }
 
@@ -197,12 +156,6 @@
             background: rgba(255,255,255,0.1);
             border-color: var(--gold);
             color: var(--gold);
-            transform: translateY(-3px);
-        }
-
-        .hero-image-wrapper {
-            position: relative;
-            z-index: 1;
         }
 
         .hero-image-wrapper img {
@@ -231,22 +184,14 @@
             box-shadow: 0 10px 30px rgba(245, 184, 27, 0.3);
         }
 
-        /* ===== SEÇÃO SOBRE ===== */
         .section-title {
             font-weight: 800;
             font-size: 2.5rem;
             margin-bottom: 15px;
-            position: relative;
         }
 
         .section-title .highlight {
             color: var(--gold);
-        }
-
-        .section-subtitle {
-            color: var(--text-gray);
-            font-size: 1.1rem;
-            margin-bottom: 40px;
         }
 
         .section-divider {
@@ -276,12 +221,6 @@
             font-size: 2.8rem;
             color: var(--gold);
             margin-bottom: 15px;
-        }
-
-        /* ===== INFO EMPRESA ===== */
-        .info-section {
-            background: white;
-            padding: 60px 0;
         }
 
         .info-grid {
@@ -318,7 +257,6 @@
             margin-top: 4px;
         }
 
-        /* ===== PEÇAS DESTAQUE ===== */
         .pecas-section {
             background: var(--bg-light);
             padding: 80px 0;
@@ -369,7 +307,6 @@
             font-size: 0.75rem;
         }
 
-        /* ===== GALERIA DE VEÍCULOS ===== */
         .veiculos-section {
             background: white;
             padding: 80px 0;
@@ -414,7 +351,6 @@
             font-size: 0.75rem;
         }
 
-        /* ===== CONTATO ===== */
         .contato-section {
             background: var(--bg-light);
             padding: 80px 0;
@@ -444,7 +380,6 @@
             padding: 14px 20px;
             border-radius: 14px;
             border: 2px solid #e2e8f0;
-            font-size: 0.95rem;
             transition: var(--transition);
         }
 
@@ -470,7 +405,6 @@
             box-shadow: 0 10px 30px rgba(245, 184, 27, 0.3);
         }
 
-        /* ===== POLÍTICA DE PRIVACIDADE ===== */
         .policy-section {
             background: white;
             padding: 60px 0 40px;
@@ -483,7 +417,6 @@
             line-height: 1.9;
         }
 
-        /* ===== FOOTER ===== */
         .footer {
             background: var(--primary-dark);
             color: var(--text-light);
@@ -539,7 +472,6 @@
             margin-top: 30px;
         }
 
-        /* ===== BACK TO TOP ===== */
         .back-to-top {
             position: fixed;
             bottom: 30px;
@@ -572,7 +504,6 @@
             transform: translateY(-5px);
         }
 
-        /* ===== RESPONSIVO ===== */
         @media (max-width: 991px) {
             .hero h1 {
                 font-size: 2.8rem;
@@ -585,9 +516,6 @@
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.2rem;
-            }
-            .hero .lead {
-                font-size: 1rem;
             }
             .hero-image-wrapper img {
                 height: 250px;
@@ -672,21 +600,21 @@
                     </div>
                     <div class="mt-4 d-flex gap-4">
                         <div>
-                            <span class="text-gold fw-bold" style="color: var(--gold); font-size: 1.5rem;">7+</span>
+                            <span style="color: var(--gold); font-size: 1.5rem; font-weight: 700;">7+</span>
                             <span class="text-light ms-1" style="font-size: 0.9rem;">Anos de Mercado</span>
                         </div>
                         <div>
-                            <span class="text-gold fw-bold" style="color: var(--gold); font-size: 1.5rem;">1000+</span>
+                            <span style="color: var(--gold); font-size: 1.5rem; font-weight: 700;">1000+</span>
                             <span class="text-light ms-1" style="font-size: 0.9rem;">Peças Vendidas</span>
                         </div>
                         <div>
-                            <span class="text-gold fw-bold" style="color: var(--gold); font-size: 1.5rem;">98%</span>
+                            <span style="color: var(--gold); font-size: 1.5rem; font-weight: 700;">98%</span>
                             <span class="text-light ms-1" style="font-size: 0.9rem;">Satisfação</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 hero-image-wrapper animate__animated animate__fadeInRight">
-                    <img src="https://picsum.photos/seed/automotivo/800/600" alt="Peças automotivas e veículos">
+                    <img src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=800&h=600&fit=crop" alt="Oficina mecânica e peças automotivas">
                     <div class="hero-badge">
                         <i class="bi bi-trophy-fill me-2"></i>Confiança e Qualidade
                     </div>
@@ -734,7 +662,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 animate__animated animate__fadeInRight">
-                    <div class="info-section p-4 rounded-4" style="background: white; box-shadow: var(--shadow);">
+                    <div style="background: white; padding: 30px; border-radius: 20px; box-shadow: var(--shadow);">
                         <h5 class="fw-bold mb-4" style="color: var(--primary-dark);">
                             <i class="bi bi-info-circle-fill me-2" style="color: var(--gold);"></i>Dados da Empresa
                         </h5>
@@ -795,22 +723,22 @@
                 <h2 class="section-title">
                     Peças em <span class="highlight">Destaque</span>
                 </h2>
-                <p class="section-subtitle">Produtos selecionados com qualidade e procedência para seu veículo</p>
+                <p class="text-muted">Produtos selecionados com qualidade e procedência para seu veículo</p>
                 <div class="section-divider mx-auto"></div>
             </div>
 
             <div class="row g-4">
                 <div class="col-md-4 animate__animated animate__fadeInUp">
                     <div class="peca-card">
-                        <img src="https://picsum.photos/seed/motor/600/400" alt="Motor elétrico">
+                        <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600&h=400&fit=crop" alt="Motor automotivo">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start">
-                                <h5 class="card-title">Motor Elétrico</h5>
+                                <h5 class="card-title">Motor Completo</h5>
                                 <span class="badge-stock"><i class="bi bi-check-circle-fill me-1"></i>Em estoque</span>
                             </div>
-                            <p class="card-text" style="color: var(--text-gray);">Motor elétrico revisado, perfeito para modelos Fiat e VW. Testado e com garantia.</p>
+                            <p class="card-text" style="color: var(--text-gray);">Motor revisado, perfeito para modelos Fiat e VW. Testado e com garantia de 6 meses.</p>
                             <div class="d-flex justify-content-between align-items-center mt-3">
-                                <span class="price">R$ 479,90</span>
+                                <span class="price">R$ 1.479,90</span>
                                 <a href="#" class="btn btn-sm" style="background: var(--gold); color: var(--primary-dark); font-weight: 600; border-radius: 50px; padding: 8px 20px;">
                                     <i class="bi bi-cart-plus me-1"></i>Comprar
                                 </a>
@@ -821,7 +749,7 @@
 
                 <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
                     <div class="peca-card">
-                        <img src="https://picsum.photos/seed/suspensao/600/400" alt="Suspensão dianteira">
+                        <img src="https://images.unsplash.com/photo-1552519507-88aa2dfa9fdb?w=600&h=400&fit=crop" alt="Suspensão automotiva">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start">
                                 <h5 class="card-title">Suspensão Dianteira</h5>
@@ -840,7 +768,7 @@
 
                 <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
                     <div class="peca-card">
-                        <img src="https://picsum.photos/seed/farol/600/400" alt="Farol completo">
+                        <img src="https://images.unsplash.com/photo-1597602926275-24e5aed4e855?w=600&h=400&fit=crop" alt="Farol automotivo">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start">
                                 <h5 class="card-title">Farol Completo</h5>
@@ -859,7 +787,7 @@
             </div>
 
             <div class="text-center mt-5">
-                <a href="#" class="btn" style="background: var(--primary-dark); color: white; padding: 12px 40px; border-radius: 50px; font-weight: 600; transition: var(--transition);">
+                <a href="#" class="btn" style="background: var(--primary-dark); color: white; padding: 12px 40px; border-radius: 50px; font-weight: 600;">
                     <i class="bi bi-grid-3x3-gap-fill me-2"></i>Ver Todas as Peças
                 </a>
             </div>
@@ -873,14 +801,14 @@
                 <h2 class="section-title">
                     Veículos em <span class="highlight">Destaque</span>
                 </h2>
-                <p class="section-subtitle">Confira nossa seleção de veículos com peças de qualidade</p>
+                <p class="text-muted">Confira nossa seleção de veículos com peças de qualidade</p>
                 <div class="section-divider mx-auto"></div>
             </div>
 
             <div class="row g-4">
                 <div class="col-md-4 animate__animated animate__fadeInUp">
                     <div class="veiculo-card">
-                        <img src="https://picsum.photos/seed/carro1/600/400" alt="Veículo 1">
+                        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=600&h=400&fit=crop" alt="Fiat Uno Mille">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start">
                                 <h5 class="card-title">Fiat Uno Mille</h5>
@@ -899,7 +827,7 @@
 
                 <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
                     <div class="veiculo-card">
-                        <img src="https://picsum.photos/seed/carro2/600/400" alt="Veículo 2">
+                        <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?w=600&h=400&fit=crop" alt="VW Gol">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start">
                                 <h5 class="card-title">VW Gol 1.6</h5>
@@ -918,7 +846,7 @@
 
                 <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
                     <div class="veiculo-card">
-                        <img src="https://picsum.photos/seed/carro3/600/400" alt="Veículo 3">
+                        <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=600&h=400&fit=crop" alt="Chevrolet Onix">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start">
                                 <h5 class="card-title">Chevrolet Onix</h5>
@@ -937,7 +865,7 @@
             </div>
 
             <div class="text-center mt-5">
-                <a href="#" class="btn" style="background: var(--primary-dark); color: white; padding: 12px 40px; border-radius: 50px; font-weight: 600; transition: var(--transition);">
+                <a href="#" class="btn" style="background: var(--primary-dark); color: white; padding: 12px 40px; border-radius: 50px; font-weight: 600;">
                     <i class="bi bi-grid-3x3-gap-fill me-2"></i>Ver Todos os Veículos
                 </a>
             </div>
@@ -1132,12 +1060,12 @@
                 <div class="col-md-4">
                     <h5>Links Rápidos</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#home"><i class="bi bi-chevron-right me-1" style="font-size: 0.7rem;"></i>Home</a></li>
-                        <li><a href="#sobre"><i class="bi bi-chevron-right me-1" style="font-size: 0.7rem;"></i>Sobre</a></li>
-                        <li><a href="#pecas"><i class="bi bi-chevron-right me-1" style="font-size: 0.7rem;"></i>Peças</a></li>
-                        <li><a href="#veiculos"><i class="bi bi-chevron-right me-1" style="font-size: 0.7rem;"></i>Veículos</a></li>
-                        <li><a href="#contato"><i class="bi bi-chevron-right me-1" style="font-size: 0.7rem;"></i>Contato</a></li>
-                        <li><a href="#politica"><i class="bi bi-chevron-right me-1" style="font-size: 0.7rem;"></i>Política de Privacidade</a></li>
+                        <li><a href="#home"><i class="bi bi-chevron-right me-1"></i>Home</a></li>
+                        <li><a href="#sobre"><i class="bi bi-chevron-right me-1"></i>Sobre</a></li>
+                        <li><a href="#pecas"><i class="bi bi-chevron-right me-1"></i>Peças</a></li>
+                        <li><a href="#veiculos"><i class="bi bi-chevron-right me-1"></i>Veículos</a></li>
+                        <li><a href="#contato"><i class="bi bi-chevron-right me-1"></i>Contato</a></li>
+                        <li><a href="#politica"><i class="bi bi-chevron-right me-1"></i>Política de Privacidade</a></li>
                     </ul>
                 </div>
 
@@ -1178,7 +1106,6 @@
     <!-- ===== SCRIPTS ===== -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // ===== BACK TO TOP =====
         const backToTop = document.getElementById('backToTop');
 
         window.addEventListener('scroll', () => {
@@ -1196,7 +1123,6 @@
             });
         });
 
-        // ===== NAVBAR ACTIVE LINK =====
         const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
         navLinks.forEach(link => {
@@ -1211,7 +1137,6 @@
             });
         });
 
-        // ===== ANIMAÇÃO AO SCROLL =====
         const observerOptions = {
             threshold: 0.15,
             rootMargin: '0px 0px -50px 0px'
