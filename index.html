@@ -1,405 +1,1203 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
-  <title>Auto Importados | Peças e Acessórios Usados</title>
-  <!-- Bootstrap 5 + Icons + Animate.css -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <!-- Google Fonts (Inter) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f8fafc;
-      color: #1e293b;
-      scroll-behavior: smooth;
-    }
-    /* Navbar */
-    .navbar-custom {
-      background: #0b2a3b;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    }
-    .navbar-custom .navbar-brand {
-      font-weight: 700;
-      letter-spacing: -0.3px;
-      color: #facc15 !important;
-    }
-    .navbar-custom .nav-link {
-      color: #e2e8f0 !important;
-      font-weight: 500;
-      transition: 0.2s;
-    }
-    .navbar-custom .nav-link:hover {
-      color: #facc15 !important;
-      transform: translateY(-1px);
-    }
-    /* Hero */
-    .hero {
-      background: linear-gradient(135deg, #0f2e3f 0%, #1b4a5f 100%);
-      padding: 4rem 0 3rem;
-      border-bottom: 6px solid #facc15;
-    }
-    .hero h1 {
-      font-weight: 700;
-      font-size: 3.2rem;
-      letter-spacing: -0.02em;
-      color: #f8fafc;
-    }
-    .hero .lead {
-      color: #cbd5e1;
-      font-size: 1.3rem;
-    }
-    .hero .btn-warning {
-      background: #facc15;
-      border: none;
-      font-weight: 600;
-      color: #0b2a3b;
-      padding: 0.7rem 2rem;
-      transition: 0.3s;
-    }
-    .hero .btn-warning:hover {
-      background: #fde047;
-      transform: scale(1.03);
-      box-shadow: 0 8px 18px rgba(250, 204, 21, 0.35);
-    }
-    /* seção cards */
-    .card {
-      border: none;
-      border-radius: 20px;
-      transition: 0.3s ease;
-      background: white;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
-    }
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-    }
-    .card i {
-      color: #facc15;
-    }
-    .section-title {
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      border-left: 6px solid #facc15;
-      padding-left: 1rem;
-    }
-    .bg-soft {
-      background: #f1f5f9;
-    }
-    .img-fluid {
-      border-radius: 24px;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
-      transition: 0.4s;
-    }
-    .img-fluid:hover {
-      transform: scale(1.01);
-    }
-    /* política / footer */
-    .footer {
-      background: #0b2a3b;
-      color: #e2e8f0;
-      border-top: 4px solid #facc15;
-    }
-    .footer a {
-      color: #facc15;
-      text-decoration: none;
-    }
-    .footer a:hover {
-      text-decoration: underline;
-      color: #fde047;
-    }
-    .policy-link {
-      cursor: pointer;
-      color: #facc15;
-      font-weight: 500;
-    }
-    .policy-link:hover {
-      text-decoration: underline;
-    }
-    .badge-ie {
-      background: #1e3a4b;
-      color: #cbd5e1;
-      font-weight: 400;
-      padding: 0.4rem 0.9rem;
-      border-radius: 40px;
-      font-size: 0.75rem;
-    }
-    .social-icon {
-      font-size: 1.6rem;
-      color: #94a3b8;
-      transition: 0.2s;
-      margin-right: 0.6rem;
-    }
-    .social-icon:hover {
-      color: #facc15;
-      transform: scale(1.08);
-    }
-    /* animações extras */
-    .animate__animated {
-      --animate-duration: 0.9s;
-    }
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2.2rem; }
-      .hero .lead { font-size: 1rem; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Importados - Peças e Acessórios Usados</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <style>
+        /* ===== RESET E VARIÁVEIS ===== */
+        :root {
+            --primary-dark: #0a1e2b;
+            --primary-blue: #1a3a4d;
+            --gold: #f5b81b;
+            --gold-light: #fcd34d;
+            --gold-dark: #d4940f;
+            --text-light: #f1f5f9;
+            --text-gray: #94a3b8;
+            --bg-light: #f8fafc;
+            --shadow: 0 10px 40px rgba(0,0,0,0.08);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-light);
+            color: #1e293b;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* ===== SCROLLBAR ===== */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--primary-dark);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--gold-dark);
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar-custom {
+            background: var(--primary-dark);
+            padding: 12px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            transition: var(--transition);
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .navbar-custom .navbar-brand {
+            font-weight: 800;
+            font-size: 1.6rem;
+            color: var(--gold) !important;
+            letter-spacing: -0.5px;
+        }
+
+        .navbar-custom .navbar-brand i {
+            font-size: 1.8rem;
+            margin-right: 10px;
+        }
+
+        .navbar-custom .nav-link {
+            color: var(--text-light) !important;
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 8px 18px !important;
+            border-radius: 8px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .navbar-custom .nav-link:hover {
+            color: var(--gold) !important;
+            background: rgba(245, 184, 27, 0.1);
+        }
+
+        .navbar-custom .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: var(--transition);
+            transform: translateX(-50%);
+        }
+
+        .navbar-custom .nav-link:hover::after {
+            width: 60%;
+        }
+
+        .navbar-custom .nav-link.active {
+            color: var(--gold) !important;
+        }
+
+        .navbar-toggler {
+            border-color: var(--gold);
+            padding: 8px 12px;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(245, 184, 27, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-blue) 100%);
+            padding: 80px 0 70px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 5px solid var(--gold);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(245, 184, 27, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(245, 184, 27, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-weight: 900;
+            font-size: 3.5rem;
+            line-height: 1.1;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 .highlight {
+            color: var(--gold);
+            position: relative;
+        }
+
+        .hero h1 .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gold);
+            border-radius: 4px;
+        }
+
+        .hero .lead {
+            color: var(--text-gray);
+            font-size: 1.2rem;
+            font-weight: 400;
+            max-width: 600px;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .hero .btn-gold {
+            background: var(--gold);
+            color: var(--primary-dark);
+            font-weight: 700;
+            padding: 14px 40px;
+            border-radius: 50px;
+            border: none;
+            transition: var(--transition);
+            font-size: 1.05rem;
+            box-shadow: 0 8px 25px rgba(245, 184, 27, 0.35);
+        }
+
+        .hero .btn-gold:hover {
+            background: var(--gold-light);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 35px rgba(245, 184, 27, 0.5);
+        }
+
+        .hero .btn-outline-light {
+            border: 2px solid rgba(255,255,255,0.3);
+            color: #fff;
+            padding: 14px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .hero .btn-outline-light:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: var(--gold);
+            color: var(--gold);
+            transform: translateY(-3px);
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-image-wrapper img {
+            border-radius: 24px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+            width: 100%;
+            height: auto;
+            transition: var(--transition);
+        }
+
+        .hero-image-wrapper img:hover {
+            transform: scale(1.02);
+        }
+
+        .hero-badge {
+            position: absolute;
+            bottom: -15px;
+            right: -15px;
+            background: var(--gold);
+            color: var(--primary-dark);
+            padding: 15px 25px;
+            border-radius: 16px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 10px 30px rgba(245, 184, 27, 0.3);
+        }
+
+        /* ===== SEÇÃO SOBRE ===== */
+        .section-title {
+            font-weight: 800;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .section-title .highlight {
+            color: var(--gold);
+        }
+
+        .section-subtitle {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        .section-divider {
+            width: 60px;
+            height: 4px;
+            background: var(--gold);
+            border-radius: 4px;
+            margin-bottom: 25px;
+        }
+
+        .about-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .about-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+        }
+
+        .about-card i {
+            font-size: 2.8rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+
+        .about-card h5 {
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .about-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ===== INFO EMPRESA ===== */
+        .info-section {
+            background: white;
+            padding: 60px 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .info-item {
+            background: var(--bg-light);
+            padding: 20px 25px;
+            border-radius: 16px;
+            border-left: 4px solid var(--gold);
+            transition: var(--transition);
+        }
+
+        .info-item:hover {
+            background: #f1f5f9;
+            transform: translateX(5px);
+        }
+
+        .info-item .label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-gray);
+            font-weight: 600;
+        }
+
+        .info-item .value {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--primary-dark);
+            margin-top: 4px;
+        }
+
+        /* ===== PEÇAS DESTAQUE ===== */
+        .pecas-section {
+            background: var(--bg-light);
+            padding: 80px 0;
+        }
+
+        .peca-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .peca-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+        }
+
+        .peca-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .peca-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .peca-card .card-body {
+            padding: 25px;
+        }
+
+        .peca-card .card-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .peca-card .card-text {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        .peca-card .price {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--gold-dark);
+        }
+
+        .peca-card .badge-stock {
+            background: #dcfce7;
+            color: #166534;
+            font-weight: 600;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+        }
+
+        /* ===== CONTATO ===== */
+        .contato-section {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            margin-bottom: 25px;
+        }
+
+        .contact-info-item .icon-box {
+            width: 55px;
+            height: 55px;
+            min-width: 55px;
+            background: var(--gold);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+        }
+
+        .contact-info-item h6 {
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .contact-info-item p {
+            color: var(--text-gray);
+            margin-bottom: 0;
+        }
+
+        .contact-form .form-control {
+            padding: 14px 20px;
+            border-radius: 14px;
+            border: 2px solid #e2e8f0;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .contact-form .form-control:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 4px rgba(245, 184, 27, 0.15);
+        }
+
+        .contact-form .btn-submit {
+            background: var(--gold);
+            color: var(--primary-dark);
+            font-weight: 700;
+            padding: 14px 40px;
+            border-radius: 50px;
+            border: none;
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+
+        .contact-form .btn-submit:hover {
+            background: var(--gold-light);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(245, 184, 27, 0.3);
+        }
+
+        /* ===== POLÍTICA DE PRIVACIDADE ===== */
+        .policy-section {
+            background: var(--bg-light);
+            padding: 60px 0 40px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .policy-section .policy-text {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .policy-section .policy-text a {
+            color: var(--gold-dark);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .policy-section .policy-text a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--primary-dark);
+            color: var(--text-light);
+            padding: 40px 0 20px;
+            border-top: 4px solid var(--gold);
+        }
+
+        .footer h5 {
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .footer p, .footer li {
+            color: var(--text-gray);
+            font-size: 0.92rem;
+            line-height: 1.8;
+        }
+
+        .footer a {
+            color: var(--text-gray);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer a:hover {
+            color: var(--gold);
+        }
+
+        .footer .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+            color: var(--text-gray);
+            font-size: 1.2rem;
+            transition: var(--transition);
+            margin-right: 8px;
+        }
+
+        .footer .social-links a:hover {
+            background: var(--gold);
+            color: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding-top: 20px;
+            margin-top: 30px;
+        }
+
+        .footer-bottom p {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+        }
+
+        /* ===== BACK TO TOP ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--gold);
+            color: var(--primary-dark);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            border: none;
+            box-shadow: 0 8px 25px rgba(245, 184, 27, 0.35);
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 999;
+            cursor: pointer;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--gold-light);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(245, 184, 27, 0.5);
+        }
+
+        /* ===== RESPONSIVO ===== */
+        @media (max-width: 991px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            .hero {
+                padding: 50px 0;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero .lead {
+                font-size: 1rem;
+            }
+            .hero .btn-gold, .hero .btn-outline-light {
+                padding: 12px 25px;
+                font-size: 0.95rem;
+            }
+            .hero-badge {
+                display: none;
+            }
+            .section-title {
+                font-size: 1.7rem;
+            }
+            .info-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .contact-info-item {
+                gap: 12px;
+            }
+            .contact-info-item .icon-box {
+                width: 45px;
+                height: 45px;
+                min-width: 45px;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            .navbar-custom .navbar-brand {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <i class="bi bi-car-front-fill me-2"></i>Auto Importados
-      </a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="#sobre"><i class="bi bi-info-circle me-1"></i>Sobre</a></li>
-          <li class="nav-item"><a class="nav-link" href="#pecas"><i class="bi bi-grid-3x3-gap-fill me-1"></i>Peças</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contato"><i class="bi bi-envelope-paper me-1"></i>Contato</a></li>
-          <li class="nav-item"><a class="nav-link" href="#politica"><i class="bi bi-shield-lock me-1"></i>Privacidade</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <div class="row align-items-center g-4">
-        <div class="col-lg-7 animate__animated animate__fadeInUp">
-          <h1 class="display-4 fw-bold">Peças & Acessórios <br><span style="color:#facc15;">Usados de Qualidade</span></h1>
-          <p class="lead mb-4">Comércio a varejo com procedência e garantia. Encontre a peça que você precisa para seu veículo, com preço justo e atendimento especializado.</p>
-          <a href="#pecas" class="btn btn-warning btn-lg shadow-sm"><i class="bi bi-search me-2"></i>Explorar peças</a>
-          <a href="#contato" class="btn btn-outline-light btn-lg ms-2"><i class="bi bi-whatsapp me-2"></i>Fale conosco</a>
-        </div>
-        <div class="col-lg-5 text-center animate__animated animate__fadeInRight">
-          <img src="https://placecats.com/800/500?random=1" alt="Oficina mecânica" class="img-fluid" style="max-height:280px; width:100%; object-fit:cover; border-radius: 30px; box-shadow: 0 20px 30px -10px rgba(0,0,0,0.5);">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOBRE + INFO EMPRESA -->
-  <section id="sobre" class="py-5">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-md-6 animate__animated animate__fadeInLeft">
-          <span class="badge bg-warning text-dark mb-2 px-3 py-2"><i class="bi bi-truck me-1"></i> 7 anos de mercado</span>
-          <h2 class="section-title mb-3">Quem somos</h2>
-          <p class="lead fs-6"><strong>Auto Importados Peças Automotivas LTDA</strong> – atuamos no varejo de peças e acessórios usados para veículos automotores. Com mais de 7 anos de experiência, oferecemos soluções confiáveis para seu carro.</p>
-          <ul class="list-unstyled">
-            <li><i class="bi bi-check-circle-fill text-warning me-2"></i> Peças revisadas e com garantia</li>
-            <li><i class="bi bi-check-circle-fill text-warning me-2"></i> Atendimento ágil e personalizado</li>
-            <li><i class="bi bi-check-circle-fill text-warning me-2"></i> Envio para todo o Brasil</li>
-          </ul>
-          <div class="mt-3 d-flex flex-wrap gap-2">
-            <span class="badge-ie"><i class="bi bi-building me-1"></i> CNPJ: 33.984.166/0001-49</span>
-            <span class="badge-ie"><i class="bi bi-calendar3 me-1"></i> Abertura: 19/06/2019</span>
-            <span class="badge-ie"><i class="bi bi-coin me-1"></i> Capital: R$ 15.000</span>
-          </div>
-          <div class="mt-3">
-            <p class="mb-1"><i class="bi bi-geo-alt-fill text-warning me-2"></i> Rua Otavio Mendes dos Santos, 175 – Galpão 01</p>
-            <p class="mb-1"><i class="bi bi-geo-alt-fill text-warning me-2"></i> Jardim Matarazzo, São Paulo – SP, 03813-030</p>
-            <p><i class="bi bi-envelope-fill text-warning me-2"></i> contato@autoimportados.com.br <span class="text-muted">(11) 2547-XXXX</span></p>
-          </div>
-        </div>
-        <div class="col-md-6 animate__animated animate__fadeInRight">
-          <img src="https://placecats.com/800/500?random=2" alt="Peças automotivas" class="img-fluid" style="max-height:300px; width:100%; object-fit:cover;">
-          <div class="row mt-3 g-2">
-            <div class="col-6"><i class="bi bi-tools text-warning fs-3"></i> <small>Inscrição Estadual SP: 126.282.101.112</small></div>
-            <div class="col-6"><i class="bi bi-truck text-warning fs-3"></i> <small>MG: 005082502.00-18</small></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DIFERENCIAIS / ÍCONES -->
-  <section class="bg-soft py-5">
-    <div class="container">
-      <div class="row text-center g-4">
-        <div class="col-md-3 col-6 animate__animated animate__fadeInUp">
-          <i class="bi bi-award display-4 text-warning"></i>
-          <h5 class="mt-2 fw-bold">Qualidade</h5>
-          <p class="small text-muted">Peças selecionadas e testadas</p>
-        </div>
-        <div class="col-md-3 col-6 animate__animated animate__fadeInUp" style="animation-delay:0.1s">
-          <i class="bi bi-clock-history display-4 text-warning"></i>
-          <h5 class="mt-2 fw-bold">Agilidade</h5>
-          <p class="small text-muted">Entrega rápida e segura</p>
-        </div>
-        <div class="col-md-3 col-6 animate__animated animate__fadeInUp" style="animation-delay:0.2s">
-          <i class="bi bi-hand-thumbs-up display-4 text-warning"></i>
-          <h5 class="mt-2 fw-bold">Confiança</h5>
-          <p class="small text-muted">Mais de 7 anos no mercado</p>
-        </div>
-        <div class="col-md-3 col-6 animate__animated animate__fadeInUp" style="animation-delay:0.3s">
-          <i class="bi bi-wallet2 display-4 text-warning"></i>
-          <h5 class="mt-2 fw-bold">Preço Justo</h5>
-          <p class="small text-muted">Comércio acessível e transparente</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PEÇAS EM DESTAQUE (vitrine) -->
-  <section id="pecas" class="py-5">
-    <div class="container">
-      <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2 class="section-title">Peças em destaque</h2>
-        <a href="#" class="text-warning fw-semibold">Ver todas <i class="bi bi-arrow-right"></i></a>
-      </div>
-      <div class="row g-4">
-        <div class="col-md-4 col-sm-6 animate__animated animate__zoomIn">
-          <div class="card p-3 h-100">
-            <img src="https://placecats.com/600/400?random=3" class="card-img-top" alt="Peça 1" style="height:180px; object-fit:cover; border-radius:16px;">
-            <div class="card-body">
-              <h5 class="card-title">Motor elétrico</h5>
-              <p class="card-text small">Revisado, perfeito estado. Para modelos Fiat e VW.</p>
-              <span class="badge bg-warning text-dark">R$ 479,90</span>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-car-front-fill"></i>Auto Importados
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pecas">Peças</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#politica">Privacidade</a>
+                    </li>
+                </ul>
             </div>
-          </div>
         </div>
-        <div class="col-md-4 col-sm-6 animate__animated animate__zoomIn" style="animation-delay:0.1s">
-          <div class="card p-3 h-100">
-            <img src="https://placecats.com/600/400?random=4" class="card-img-top" alt="Peça 2" style="height:180px; object-fit:cover; border-radius:16px;">
-            <div class="card-body">
-              <h5 class="card-title">Suspensão dianteira</h5>
-              <p class="card-text small">Completa, com amortecedores e molas. Origem confiável.</p>
-              <span class="badge bg-warning text-dark">R$ 890,00</span>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 animate__animated animate__fadeInUp">
+                    <h1>
+                        Peças Usadas<br>
+                        <span class="highlight">De Qualidade</span>
+                    </h1>
+                    <p class="lead">
+                        Comércio a varejo especializado em peças e acessórios usados para veículos automotores. 
+                        Mais de 7 anos de experiência garantindo confiança e economia para você.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#pecas" class="btn btn-gold">
+                            <i class="bi bi-search me-2"></i>Ver Peças
+                        </a>
+                        <a href="#contato" class="btn btn-outline-light">
+                            <i class="bi bi-whatsapp me-2"></i>Fale Conosco
+                        </a>
+                    </div>
+                    <div class="mt-4 d-flex gap-4">
+                        <div>
+                            <span class="text-gold fw-bold" style="color: var(--gold); font-size: 1.5rem;">7+</span>
+                            <span class="text-light ms-1" style="font-size: 0.9rem;">Anos de Mercado</span>
+                        </div>
+                        <div>
+                            <span class="text-gold fw-bold" style="color: var(--gold); font-size: 1.5rem;">1000+</span>
+                            <span class="text-light ms-1" style="font-size: 0.9rem;">Peças Vendidas</span>
+                        </div>
+                        <div>
+                            <span class="text-gold fw-bold" style="color: var(--gold); font-size: 1.5rem;">98%</span>
+                            <span class="text-light ms-1" style="font-size: 0.9rem;">Satisfação</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 hero-image-wrapper animate__animated animate__fadeInRight">
+                    <img src="https://placecats.com/800/600?random=1" alt="Oficina e peças automotivas" class="img-fluid">
+                    <div class="hero-badge">
+                        <i class="bi bi-trophy-fill me-2"></i>Confiança e Qualidade
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="col-md-4 col-sm-6 animate__animated animate__zoomIn" style="animation-delay:0.2s">
-          <div class="card p-3 h-100">
-            <img src="https://placecats.com/600/400?random=5" class="card-img-top" alt="Peça 3" style="height:180px; object-fit:cover; border-radius:16px;">
-            <div class="card-body">
-              <h5 class="card-title">Farol completo</h5>
-              <p class="card-text small">Original, sem riscos. Acompanha lâmpadas.</p>
-              <span class="badge bg-warning text-dark">R$ 320,00</span>
+    </section>
+
+    <!-- ===== SOBRE ===== -->
+    <section id="sobre" class="py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 animate__animated animate__fadeInLeft">
+                    <span class="badge bg-warning text-dark mb-3 px-4 py-2" style="font-weight: 600;">
+                        <i class="bi bi-building me-2"></i>Auto Importados Peças Automotivas LTDA
+                    </span>
+                    <h2 class="section-title">
+                        Sobre <span class="highlight">Nossa</span> Empresa
+                    </h2>
+                    <div class="section-divider"></div>
+                    <p style="font-size: 1.05rem; line-height: 1.8; color: #334155;">
+                        Somos uma <strong>Micro Empresa</strong> especializada no comércio a varejo de <strong>peças e acessórios usados</strong> para veículos automotores. 
+                        Atuamos com transparência, qualidade e compromisso com nossos clientes.
+                    </p>
+                    <p style="font-size: 1.05rem; line-height: 1.8; color: #334155;">
+                        Nossa missão é oferecer soluções confiáveis para a manutenção do seu veículo, 
+                        com peças revisadas e garantia de procedência.
+                    </p>
+                    
+                    <div class="row g-3 mt-3">
+                        <div class="col-sm-6">
+                            <div class="about-card">
+                                <i class="bi bi-shield-check"></i>
+                                <h5>Peças Garantidas</h5>
+                                <p>Todas as peças passam por rigorosa inspeção de qualidade.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="about-card">
+                                <i class="bi bi-clock-history"></i>
+                                <h5>Agilidade</h5>
+                                <p>Atendimento rápido e entrega eficiente para todo o Brasil.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 animate__animated animate__fadeInRight">
+                    <div class="info-section p-4 rounded-4" style="background: white; box-shadow: var(--shadow);">
+                        <h5 class="fw-bold mb-4" style="color: var(--primary-dark);">
+                            <i class="bi bi-info-circle-fill me-2" style="color: var(--gold);"></i>Dados da Empresa
+                        </h5>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="label">CNPJ</div>
+                                <div class="value">33.984.166/0001-49</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="label">Razão Social</div>
+                                <div class="value">Auto Importados Peças Automotivas LTDA</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="label">Nome Fantasia</div>
+                                <div class="value">Auto Importados</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="label">Abertura</div>
+                                <div class="value">19/06/2019 (7+ anos)</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="label">Porte</div>
+                                <div class="value">Micro Empresa</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="label">Capital Social</div>
+                                <div class="value">R$ 15.000,00</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="label">Situação</div>
+                                <div class="value" style="color: #16a34a;">Ativa</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="label">Natureza Jurídica</div>
+                                <div class="value">Sociedade Empresária Ltda</div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 p-3" style="background: var(--bg-light); border-radius: 12px;">
+                            <p class="mb-1" style="font-size: 0.85rem; color: var(--text-gray);">
+                                <i class="bi bi-tag me-2" style="color: var(--gold);"></i>
+                                <strong>Inscrições Estaduais:</strong> SP: 126.282.101.112 | MG: 005082502.00-18 | PB: 16.905.589-2
+                            </p>
+                            <p class="mb-0" style="font-size: 0.85rem; color: var(--text-gray);">
+                                PE: 1108752-81 | PR: 09911204-24 | RS: 900/0071505
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTATO + LOCALIZAÇÃO -->
-  <section id="contato" class="bg-soft py-5">
-    <div class="container">
-      <div class="row g-5">
-        <div class="col-md-6">
-          <h2 class="section-title mb-3"><i class="bi bi-chat-dots me-2"></i>Entre em contato</h2>
-          <p><i class="bi bi-whatsapp text-success me-2"></i> (11) 99999-9999</p>
-          <p><i class="bi bi-envelope me-2"></i> au****@****.com</p>
-          <p><i class="bi bi-clock me-2"></i> Seg–Sex: 8h–18h | Sáb: 8h–13h</p>
-          <div class="mt-4">
-            <h5><i class="bi bi-geo-alt-fill text-warning me-2"></i>Endereço para correspondência</h5>
-            <address class="fst-normal">
-              Auto Importados Peças Automotivas LTDA<br>
-              Rua Otavio Mendes dos Santos, 175 – Galpão 01<br>
-              Jardim Matarazzo, São Paulo – SP, 03813-030
-            </address>
-          </div>
-          <div class="d-flex gap-3 mt-3">
-            <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="bg-white p-4 rounded-4 shadow-sm">
-            <h5 class="fw-bold"><i class="bi bi-pin-map-fill text-warning me-2"></i>Localização</h5>
-            <img src="https://placecats.com/800/400?random=6" alt="Mapa ilustrativo" class="img-fluid rounded-4" style="max-height:220px; width:100%; object-fit:cover;">
-            <p class="mt-3 small text-muted"><i class="bi bi-info-circle"></i> Galpão 01 – Fácil acesso pela Av. Matarazzo.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- ===== PEÇAS DESTAQUE ===== -->
+    <section id="pecas" class="pecas-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">
+                    Peças em <span class="highlight">Destaque</span>
+                </h2>
+                <p class="section-subtitle">Produtos selecionados com qualidade e procedência para seu veículo</p>
+                <div class="section-divider mx-auto"></div>
+            </div>
 
-  <!-- POLÍTICA DE PRIVACIDADE (modal) -->
-  <section id="politica" class="py-4 bg-white border-top">
-    <div class="container text-center">
-      <span class="policy-link" data-bs-toggle="modal" data-bs-target="#privacyModal">
-        <i class="bi bi-shield-lock-fill me-1"></i> Política de Privacidade
-      </span>
-      <span class="mx-3 text-muted">|</span>
-      <span class="policy-link" data-bs-toggle="modal" data-bs-target="#termsModal">
-        <i class="bi bi-file-text me-1"></i> Termos de Uso
-      </span>
-      <p class="mt-3 small text-muted">&copy; 2026 Auto Importados – Todos os direitos reservados.</p>
-    </div>
-  </section>
+            <div class="row g-4">
+                <div class="col-md-4 animate__animated animate__fadeInUp">
+                    <div class="peca-card">
+                        <img src="https://placecats.com/600/400?random=2" alt="Motor elétrico">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="card-title">Motor Elétrico</h5>
+                                <span class="badge-stock"><i class="bi bi-check-circle-fill me-1"></i>Em estoque</span>
+                            </div>
+                            <p class="card-text">Motor elétrico revisado, perfeito para modelos Fiat e VW. Testado e com garantia.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="price">R$ 479,90</span>
+                                <a href="#" class="btn btn-sm" style="background: var(--gold); color: var(--primary-dark); font-weight: 600; border-radius: 50px; padding: 8px 20px;">
+                                    <i class="bi bi-cart-plus me-1"></i>Comprar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- MODAL PRIVACIDADE -->
-  <div class="modal fade" id="privacyModal" tabindex="-1">
-    <div class="modal-dialog modal-lg modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header border-0">
-          <h5 class="modal-title fw-bold"><i class="bi bi-shield-lock me-2 text-warning"></i>Política de Privacidade</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          <p><strong>Auto Importados Peças Automotivas LTDA</strong> – respeita sua privacidade. Coletamos dados apenas para processamento de pedidos e melhoria dos nossos serviços. Seus dados não são compartilhados com terceiros sem sua autorização expressa. Você pode solicitar a exclusão dos seus dados a qualquer momento.</p>
-          <ul>
-            <li><i class="bi bi-check-circle text-warning"></i> Dados cadastrais: nome, e-mail, telefone, endereço.</li>
-            <li><i class="bi bi-check-circle text-warning"></i> Utilizamos cookies para melhorar a experiência.</li>
-            <li><i class="bi bi-check-circle text-warning"></i> Você pode revogar o consentimento a qualquer instante.</li>
-          </ul>
-          <p class="small">Última atualização: 06/09/2026</p>
-        </div>
-        <div class="modal-footer border-0">
-          <button class="btn btn-warning" data-bs-dismiss="modal">Entendi</button>
-        </div>
-      </div>
-    </div>
-  </div>
+                <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
+                    <div class="peca-card">
+                        <img src="https://placecats.com/600/400?random=3" alt="Suspensão dianteira">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="card-title">Suspensão Dianteira</h5>
+                                <span class="badge-stock"><i class="bi bi-check-circle-fill me-1"></i>Em estoque</span>
+                            </div>
+                            <p class="card-text">Conjunto completo de suspensão dianteira com amortecedores e molas originais.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="price">R$ 890,00</span>
+                                <a href="#" class="btn btn-sm" style="background: var(--gold); color: var(--primary-dark); font-weight: 600; border-radius: 50px; padding: 8px 20px;">
+                                    <i class="bi bi-cart-plus me-1"></i>Comprar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- MODAL TERMOS -->
-  <div class="modal fade" id="termsModal" tabindex="-1">
-    <div class="modal-dialog modal-lg modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header border-0">
-          <h5 class="modal-title fw-bold"><i class="bi bi-file-text me-2 text-warning"></i>Termos de Uso</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          <p>Ao utilizar nosso site, você concorda com os termos descritos. Todos os produtos são comercializados de acordo com a legislação vigente. As imagens são ilustrativas e sujeitas a variações. A Auto Importados se reserva o direito de alterar preços e condições sem aviso prévio.</p>
-          <p><strong>Garantia:</strong> As peças usadas possuem garantia de 3 meses contra defeitos de fabricação. A devolução deve ser solicitada em até 7 dias após o recebimento.</p>
-        </div>
-        <div class="modal-footer border-0">
-          <button class="btn btn-warning" data-bs-dismiss="modal">Aceito</button>
-        </div>
-      </div>
-    </div>
-  </div>
+                <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                    <div class="peca-card">
+                        <img src="https://placecats.com/600/400?random=4" alt="Farol completo">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="card-title">Farol Completo</h5>
+                                <span class="badge-stock"><i class="bi bi-check-circle-fill me-1"></i>Em estoque</span>
+                            </div>
+                            <p class="card-text">Farol original em excelente estado, sem riscos. Acompanha lâmpadas e soquete.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="price">R$ 320,00</span>
+                                <a href="#" class="btn btn-sm" style="background: var(--gold); color: var(--primary-dark); font-weight: 600; border-radius: 50px; padding: 8px 20px;">
+                                    <i class="bi bi-cart-plus me-1"></i>Comprar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- pequeno script para animação ao scroll (opcional) -->
-  <script>
-    (function() {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate__fadeInUp');
-          }
+            <div class="text-center mt-5">
+                <a href="#" class="btn" style="background: var(--primary-dark); color: white; padding: 12px 40px; border-radius: 50px; font-weight: 600; transition: var(--transition);">
+                    <i class="bi bi-grid-3x3-gap-fill me-2"></i>Ver Todas as Peças
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTATO ===== -->
+    <section id="contato" class="contato-section">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 animate__animated animate__fadeInLeft">
+                    <h2 class="section-title">
+                        Entre em <span class="highlight">Contato</span>
+                    </h2>
+                    <div class="section-divider"></div>
+                    <p style="font-size: 1.05rem; color: #334155; margin-bottom: 30px;">
+                        Estamos prontos para atender você. Fale conosco por telefone, e-mail ou visite nossa loja física.
+                    </p>
+
+                    <div class="contact-info-item">
+                        <div class="icon-box">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <div>
+                            <h6>Endereço</h6>
+                            <p>
+                                Rua Otavio Mendes dos Santos, 175 - Galpão 01<br>
+                                Jardim Matarazzo, São Paulo - SP<br>
+                                CEP: 03813-030
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="icon-box">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <div>
+                            <h6>E-mail</h6>
+                            <p>au****@****.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="icon-box">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <div>
+                            <h6>Telefone</h6>
+                            <p>(11) 254****-****</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="icon-box">
+                            <i class="bi bi-clock-fill"></i>
+                        </div>
+                        <div>
+                            <h6>Horário de Funcionamento</h6>
+                            <p>Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 13h</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h6 style="font-weight: 700;">Para correspondência:</h6>
+                        <p style="color: var(--text-gray);">
+                            Auto Importados Peças Automotivas LTDA<br>
+                            Rua Otavio Mendes dos Santos, 175 - Galpão 01<br>
+                            Jardim Matarazzo, São Paulo - SP<br>
+                            CEP: 03813-030
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 animate__animated animate__fadeInRight">
+                    <div style="background: var(--bg-light); padding: 40px; border-radius: 24px; box-shadow: var(--shadow);">
+                        <h5 class="fw-bold mb-4">
+                            <i class="bi bi-chat-dots-fill me-2" style="color: var(--gold);"></i>Envie uma Mensagem
+                        </h5>
+                        <form class="contact-form">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Seu nome completo" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Seu e-mail" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" class="form-control" placeholder="Seu telefone">
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="5" placeholder="Sua mensagem..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-submit w-100">
+                                <i class="bi bi-send-fill me-2"></i>Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== POLÍTICA DE PRIVACIDADE ===== -->
+    <section id="politica" class="policy-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="text-center mb-4">
+                        <i class="bi bi-shield-lock-fill" style="font-size: 2.5rem; color: var(--gold);"></i>
+                        <h3 class="fw-bold mt-2">Política de Privacidade</h3>
+                        <div class="section-divider mx-auto"></div>
+                    </div>
+                    <div class="policy-text">
+                        <p>
+                            A <strong>Auto Importados Peças Automotivas LTDA</strong> valoriza a privacidade e a proteção dos dados de seus clientes. 
+                            Esta política descreve como coletamos, usamos e protegemos suas informações pessoais.
+                        </p>
+                        
+                        <h6 class="fw-bold mt-4">1. Coleta de Dados</h6>
+                        <p>
+                            Coletamos informações fornecidas voluntariamente por você, como nome, e-mail, telefone e endereço, 
+                            para processamento de pedidos, atendimento ao cliente e comunicações sobre nossos produtos e serviços.
+                        </p>
+
+                        <h6 class="fw-bold mt-3">2. Uso das Informações</h6>
+                        <p>
+                            Utilizamos seus dados para:
+                            <br>
+                            • Processar e entregar seus pedidos<br>
+                            • Enviar atualizações sobre o status do seu pedido<br>
+                            • Oferecer suporte ao cliente<br>
+                            • Enviar promoções e novidades (com seu consentimento)
+                        </p>
+
+                        <h6 class="fw-bold mt-3">3. Compartilhamento de Dados</h6>
+                        <p>
+                            Não compartilhamos suas informações pessoais com terceiros, exceto quando necessário para a entrega de produtos 
+                            (como transportadoras) ou quando exigido por lei.
+                        </p>
+
+                        <h6 class="fw-bold mt-3">4. Segurança</h6>
+                        <p>
+                            Implementamos medidas de segurança para proteger seus dados contra acesso não autorizado, alteração ou divulgação.
+                        </p>
+
+                        <h6 class="fw-bold mt-3">5. Cookies</h6>
+                        <p>
+                            Utilizamos cookies para melhorar sua experiência em nosso site. Você pode gerenciar suas preferências de cookies 
+                            nas configurações do seu navegador.
+                        </p>
+
+                        <h6 class="fw-bold mt-3">6. Seus Direitos</h6>
+                        <p>
+                            Você tem o direito de acessar, corrigir ou excluir seus dados pessoais a qualquer momento. 
+                            Para isso, entre em contato conosco.
+                        </p>
+
+                        <h6 class="fw-bold mt-3">7. Contato</h6>
+                        <p>
+                            Para questões sobre esta política, entre em contato pelo e-mail: <a href="#">au****@****.com</a>
+                        </p>
+
+                        <p class="mt-4 mb-0" style="font-size: 0.85rem; color: var(--text-gray);">
+                            <i class="bi bi-clock me-1"></i> Última atualização: 06/09/2026
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5>
+                        <i class="bi bi-car-front-fill me-2"></i>Auto Importados
+                    </h5>
+                    <p>
+                        Comércio a varejo de peças e acessórios usados para veículos automotores. 
+                        Qualidade e confiança há mais de 7 anos.
+                    </p>
+                    <div class="social-links mt-3">
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                        <a href="#"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home"><i class="bi bi-chevron-right me-1" style="font-size: 0.7rem;"></i>Home</a></li>
+                        <li><a href="#sobre"><i class="bi bi-chevron-right me-1" style="font-size: 0.7rem;"></i>Sobre</a></li>
+                        <li><a href="#pecas"><i class="bi bi-chevron-right me-1" style="font-size: 0.7rem;"></i>Peças</a></li>
+                        <li><a href="#contato"><i class="bi bi-chevron-right me-1" style="font-size: 0.7rem;"></i>Contato</a></li>
+                        <li><a href="#politica"><i class="bi bi-chevron-right me-1" style="font-size: 0.7rem;"></i>Política de Privacidade</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>Contato</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-geo-alt me-2" style="color: var(--gold);"></i>Rua Otavio Mendes dos Santos, 175</li>
+                        <li><i class="bi bi-geo-alt me-2" style="color: var(--gold);"></i>Jardim Matarazzo - São Paulo - SP</li>
+                        <li><i class="bi bi-envelope me-2" style="color: var(--gold);"></i>au****@****.com</li>
+                        <li><i class="bi bi-telephone me-2" style="color: var(--gold);"></i>(11) 254****-****</li>
+                        <li><i class="bi bi-clock me-2" style="color: var(--gold);"></i>Seg-Sex: 8h-18h | Sáb: 8h-13h</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">
+                            &copy; 2026 Auto Importados Peças Automotivas LTDA - Todos os direitos reservados
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <p class="mb-0" style="font-size: 0.8rem;">
+                            CNPJ: 33.984.166/0001-49 | Micro Empresa
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="back-to-top" id="backToTop">
+        <i class="bi bi-chevron-up"></i>
+    </button>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // ===== BACK TO TOP =====
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
         });
-      }, { threshold: 0.2 });
-      document.querySelectorAll('.animate__animated').forEach(el => {
-        observer.observe(el);
-      });
-    })();
-  </script>
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // ===== NAVBAR ACTIVE LINK =====
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Fechar menu mobile
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarCollapse.classList.contains('show')) {
+                    navbarCollapse.classList.remove('show');
+                }
+            });
+        });
+
+        // ===== ANIMAÇÃO AO SCROLL =====
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate__animated').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+
+        // Iniciar animações visíveis inicialmente
+        setTimeout(() => {
+            document.querySelectorAll('.animate__animated').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    el.style.animationPlayState = 'running';
+                }
+            });
+        }, 100);
+    </script>
 </body>
 </html>
